@@ -1,0 +1,298 @@
+.main_outer {
+	&.afterlogin {
+		background-color:$color-f3;	
+		@include padding(155 15 0 15);
+		@media screen and (max-width:$desktop){
+			@include padding(105 15 0 15);
+		}
+		@media screen and (max-width:$h_tab){
+			@include padding(160 15 0 15);
+		}
+		@media screen and (max-width:$ptablet){
+			@include padding(140 15 0 15);
+		}
+		.container-fluid{	
+			@include padding-left(350);
+			transition: all 0.5s ease;
+			-moz-transition: all 0.5s ease;
+			-webkit-transition: all 0.5s ease;
+			@media screen and (max-width:$h_tab){
+				@include padding-left(55);
+			}
+			@media screen and (max-width:$ptablet){
+				@include padding(0);
+			}
+			&.contnt-right{
+				@include padding-left(255);
+			}
+		}
+		main{
+			.top-row{
+				@include padding(0 0 25 0);
+				h2{
+					@include font-size(22);
+					@include margin(0);
+					font-weight: 400;
+					@media screen and (max-width:$tablet){
+						@include font-size(18);					
+					}
+					@media screen and (max-width:$ptablet){
+						@include margin(10);
+					}
+				}
+				.search-top-btn{
+	   				@include padding(3);
+				    border: solid 1px #E4E4E4;
+				    background-color: $white;
+					input{
+					    border: 0;
+					    font-weight: 400;
+					    @include font-size(14);
+					    box-shadow: none;
+					    @include padding(15 25);
+					    height:auto;
+					    color:#b5adad;
+					}
+					button{
+					    margin: 2px 0 0 0;
+					    background: none;
+					    box-shadow: none;
+					    border: 0;
+					    @include font-size(28);
+					    color:#797979;
+					    @include padding(0 8 0 10);
+					    border-left: solid 1px #ccc;
+					    &:hover{
+						    border: 0;
+						    box-shadow: none;
+						    border-left: solid 1px #ccc;
+						}  
+					}
+				}
+			}
+			.dashboard-box{
+				@include margin-bottom(45);
+				padding:0 25px !important;
+				height:195px;
+				@media screen and (max-width:$mini-desktop){
+					@include margin-bottom(25);
+					padding:0 10px !important;
+				}
+				.dashboard-in {
+					display: table;
+					border: 1px solid $color-e7;
+					background-color: $white;
+					width: 100%;
+					height: 100%;
+					@include padding(0 55);
+					@media screen and (max-width:$desktop){
+						@include padding(0 30);
+					}
+					.dashboard-inner{
+						display: table-cell;
+						vertical-align: middle;
+						@media screen and (max-width:$mobile){
+							text-align: center;
+						}
+					}
+				}
+				.dashbrd-icon{
+					float: left;
+					@include margin-right(45);
+					@include square(104px);
+					@include radius(50%);
+					background-color: $skycolor;
+					text-align: center;
+					@media screen and (max-width:$desktop){
+						@include square(90px);
+						@include margin-right(30);
+					}
+					@media screen and (max-width:$mini-desktop){
+						@include square(80px);
+						@include margin-right(20);
+					}
+					@media screen and (max-width:$mobile){
+						display: inline-block;
+						float: none;
+						@include margin-right(0);
+					}
+					i{
+						line-height: 98px !important;
+						color:$white;
+						@include font-size(50);
+						@media screen and (max-width:$desktop){
+							line-height: 86px !important;
+							@include font-size(38);
+						}
+						@media screen and (max-width:$mini-desktop){
+							line-height: 78px !important;							
+						}
+					}
+				}
+				h4{
+					color:$skycolor; 
+					font-weight: 400;
+					@include font-size(27);
+					@include margin(10 0 10 0);
+					@media screen and (max-width:$desktop){
+						@include margin(0);
+					}
+				}
+				h5{
+					color:$color-42; 
+					font-weight: 400;
+					@include font-size(19);
+					@media screen and (max-width:$desktop){
+						@include font-size(16);
+					}
+				}
+				&.parrot-box{
+					.dashbrd-icon{
+						background-color: $parrotcolor;						
+					}
+					h4{
+						color:$parrotcolor;	 					
+					}
+				}
+				&.sky-box{
+					.dashbrd-icon{
+						background-color: $blue-color;						
+					}
+					h4{
+						color:$blue-color;	 					
+					}
+				}
+				&.pink-box{
+					.dashbrd-icon{
+						background-color: $pink-color;						
+					}
+					h4{
+						color:$pink-color;	 					
+					}
+				}
+			}
+			.editor-box{
+				textarea{
+					@include min-height(450);
+					@media screen and (max-width:$desktop){
+						@include min-height(350);
+					}
+					@media screen and (max-width:$ptablet){
+						@include min-height(300);
+					}
+				}
+			}
+			.custom-table{
+				background-color: $white;				
+				table{
+					@include margin(0);	
+					tr{
+						th{
+							background-color: $table-headcolor;
+							@include font-size(22);
+							color: $color-42;
+							font-weight: 400;
+							@include padding(24 25);	
+							border:1px solid $color-ed;
+							@media screen and (max-width:$desktop){
+								@include font-size(18);
+								@include padding(18 18);
+							}
+							@media screen and (max-width:$tablet){
+								@include font-size(16);
+								@include padding(15);
+							}		
+							&.serial-no{
+								width:5%;
+							}						
+						}
+						td{
+							font-weight: 400;
+							@include font-size(17);
+							@include padding(27 25);
+							vertical-align: middle;
+							color: $color-7b;
+							border:1px solid $color-ed;
+							@media screen and (max-width:$desktop){
+								@include font-size(15);
+								@include padding(20 18);
+							}	
+							@media screen and (max-width:$tablet){
+								@include font-size(14);
+								@include padding(15);
+							}		
+							&:first-child{
+								text-align: center;
+							}	
+							&.red-color{
+								color:$red;
+								a{
+									color:$red;	
+								}
+							}
+							&.green-color{
+								color:$green-color;
+								a{
+									color:$green-color;	
+								}
+							}						
+						}
+					}
+					&.table-btn{
+						tr{
+							td{
+								&.table-btn{
+									@include padding(20 25);
+									/* text-align: center; */		
+								}
+							}
+						}
+					}				
+				}
+			}
+			.bottom-row{
+				@include margin(40 -15);
+				@media screen and (max-width:$desktop){
+					@include margin(20 -15);
+				}
+				.custom-btn{
+					@include min-width(145);
+				}
+				.pagination{
+					&.pagination-custom{
+						@include margin(0);
+						li{
+							display: inline-block;
+							@include margin-left(10);
+							@include square(28px); 
+							@media screen and (max-width:$desktop){
+								@include margin-left(5);								 
+							}
+							@media screen and (max-width:$tablet){
+								@include margin-left(2);								 
+							}
+							a{
+								width:100%;
+								height:100%;
+								@include padding(0);
+								text-align: center;
+								line-height: 26px !important;
+								@include font-size(15);
+								color:$color-42;
+								&:hover, &.active{
+									color: $white;
+									background-color: $skycolor;
+								}
+							}
+							&:first-child, &:last-child{
+								a{
+									@include font-size(12);
+								} 
+							}
+						}						
+					}
+				}
+			}		
+		}		
+	}	
+}

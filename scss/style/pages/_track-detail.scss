@@ -1,0 +1,77 @@
+.main_outer {
+	&.afterlogin {
+		.track-detail-outer{
+			.user-inf{
+				.user-img{
+					float: left;
+					@include square(84px);
+					@include circle();
+					@include margin-right(30);
+					overflow: hidden;
+					@media screen and (max-width:$ptablet){
+						@include square(64px);
+						@include margin-right(20);
+					}
+					img{
+						max-width: 100%;
+					}
+				}
+				.user-inf-cont{
+					float:left;
+					h4{
+						color: $color-42;
+						@include margin(10 0 0 0);
+						@include font-size(23);
+						font-weight: 500;
+						@media screen and (max-width:$desktop){
+							@include font-size(20);
+						}
+						@media screen and (max-width:$ptablet){
+							@include margin(0);
+						}
+					}
+					h5{
+						color: $color-42;
+						@include font-size(20);					
+						font-weight: 400;
+						@media screen and (max-width:$desktop){
+							@include font-size(18);
+						}
+					}
+				}
+			}
+			.video-box{
+				width:100%;
+				float: left;
+				@include margin(40 0);
+				@media screen and (max-width:$ptablet){
+					@include margin(20 0);
+				}
+			}
+			.track-detail{
+				width:100%;
+				float: left;
+				li{
+					color: $color-42;
+					@include margin-bottom(20);
+					@include font-size(20);
+					font-weight: 400;
+					@media screen and (max-width:$desktop){
+						@include font-size(18);
+						@include margin-bottom(15);
+					}
+					@media screen and (max-width:$ptablet){
+						@include font-size(16);
+						@include margin-bottom(10);
+					}
+					span{
+						font-weight: 500;
+					}
+					&:last-child{
+						@include margin-bottom(0);
+					}
+				}
+			}
+		}
+	}	
+}

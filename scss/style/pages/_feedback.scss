@@ -1,0 +1,61 @@
+.main_outer {
+	&.afterlogin {		
+		main{
+			.custom-table{
+				table{
+					&.i-feedback-tb{
+						tr{
+							th{
+								&:nth-child(4){
+									text-align: center;
+								}	
+							}
+							td{
+								&:nth-child(4){
+									text-align: center;
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		.feedback-page{
+			width:100%;
+			float: left;
+			.feedback-form{
+				@include margin-bottom(40);
+				width:100%;
+				float: left;
+				.feedback-input{
+					@include margin-bottom(25);
+					input{
+						&.form-control{
+							@include font-size(18);
+							@include radius(0);
+							color: $color-42;
+							@include padding(22 30);
+							height: auto;
+							@media screen and (max-width:$desktop){
+								@include font-size(14);
+								@include padding(15 20);
+							}		
+						}
+					}
+				}
+
+			}
+			.feedback-cont{
+				background-color: $white;
+				@include padding(28);
+				border: 1px solid $color-e1;
+				@media screen and (max-width:$desktop){
+					@include padding(22);					
+				}
+				p{
+					color: $color-42;						
+				}
+			}
+		}
+	}	
+}

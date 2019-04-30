@@ -1,0 +1,20 @@
+.main_outer {
+	&.afterlogin {			
+		main{		
+			.custom-table{
+				table{									
+					&.reported-track-tb{
+						tr{
+							td{
+								text-align: center;
+								&:nth-child(3){
+									text-align: left;
+								}
+							}
+						}
+					}							
+				}
+			}				
+		}		
+	}	
+}

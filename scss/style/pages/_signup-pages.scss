@@ -1,0 +1,139 @@
+.beforelogin {	
+	background-image: url(../images/beforelogin-bg.jpg);
+	@include bg_cover($size:cover, $position: top center, $repeat: no-repeat);	
+	.outer-contain{
+		height:100vh;
+		@media screen and (max-width:$ptablet){
+			height:auto;
+			@include margin(30 0);
+		}
+		.before-container{
+			@include box-shadow(1px, 1px, 9px, rgba(0,0,0,0.5));
+			background-color:$skycolor;
+			@include pos(a, null);
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			@media screen and (max-width:$ptablet){
+				position: static;
+				margin:0;
+				transform: translateY(0%);
+				-moz-transform: translateY(0%);
+				-webkit-transform: translateY(0%);
+			}		
+			.logo-outer{				
+				@include height(535);
+				@media screen and (max-width:$tablet){
+					@include height(496);					
+				}
+				@media screen and (max-width:$ptablet){
+					height:auto;					
+				}
+				.logo{
+					display:table;
+					height:100%;
+					width:100%;
+					@media screen and (max-width:$ptablet){
+						@include padding(20);
+					}
+					a{
+						display: table-cell;
+						vertical-align: middle;
+						img{
+							@media screen and (max-width:$ptablet){
+								max-width: 100%;
+							}
+						}
+					}
+				}
+			}
+			.login-form{
+				@include min-height(535);
+				@include padding(40 50);
+				background-color: $white;
+				@media screen and (max-width:$desktop){
+					@include padding(25 30);
+				}
+				@media screen and (max-width:$mini-desktop){
+					@include padding(15 20);
+				}
+				@media screen and (max-width:$tablet){
+					@include min-height(496);					
+				}
+				@media screen and (max-width:$ptablet){
+					@include min-height(0);					
+				}	
+				h2{
+					font-weight: 500;
+					color:$color-42;
+				}
+				p{	
+					font-weight: 300;
+					color:$color-60;				
+				}
+				.alert {
+					font-weight: 400;
+					color:$color-42;
+					@include font-size(18);	
+					@include border-round(0);
+					@include margin-bottom(5);
+					@include padding(5);
+					@media screen and (max-width:$mini-desktop){
+						@include font-size(14);	
+					}
+					&.alert-success{
+						border-color:$darkgreen-color;						
+						background-color: #f2fbf5;	
+					} 
+				}
+				.form-group{
+					@include margin-bottom(32);
+					@media screen and (max-width:$mini-desktop){
+						@include margin-bottom(25);
+					}
+					@media screen and (max-width:$ptablet){
+						@include margin-bottom(15);
+					}
+						input{
+							&.form-control{
+							@include radius(0);
+							border-color:$acacac;
+							@include padding(15 25);
+							@include font-size(16);
+							height:auto;
+							color:$color-42;
+							@media screen and (max-width:$mini-desktop){
+								@include padding(15 20);
+								@include font-size(14);
+							}
+								&[type="submit"]{
+									color:$white;
+									border-color: $skycolor;
+									&:hover{
+										color: $skycolor;
+									}
+								}
+							}
+							&.purple-btn{
+								margin-top: 5px;
+								display: inline-block;
+								width:100%;
+							}
+						}
+					.forget-pswd{
+						@include font-size(18);
+						@media screen and (max-width:$mini-desktop){
+							@include font-size(16);
+						}
+					}
+					&:last-child{
+						@include margin-bottom(0);
+					}
+				}
+			}		
+		}
+	}
+}      

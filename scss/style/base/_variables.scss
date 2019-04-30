@@ -1,0 +1,54 @@
+// THEME AND COLOR
+
+
+$white: #ffffff !default;
+$dulwhite: rgba(255, 255, 255, 0.65) !default;
+$basecolor: #666666 !default;
+
+$h1-color:#292e59;
+$radio-color:#52b3c6;
+
+$color-e1: #e1e1e1;
+$color-f3: #f3f3f3;
+$color-e7: #e7e7e7;
+$color-ae: #aeaeae;
+$color-60: #606060;
+$color-42: #424242;
+$color-7b: #7b7b7b;
+$color-ed: #ededed;
+$acacac: #acacac;
+$transparent:transparent;
+$darkgreen-color:#01a93c;
+$green-color:#01a13d;
+$blue-color:#1ea0fc;
+$pink-color:#f75d81;
+//block divs
+$block: block;
+$inline: inline-block;
+
+// PATH & FONT NAME
+$imgpath: "../images/" !default;
+$primary-font-path: "../fonts" !default;
+$url: $imgpath !default;
+$font-family: 'Poppins', sans-serif !default;
+
+// FONTS and TEXT STYLE
+$lineheight: 1.5 !default;
+$lineheight-sm: 1.2 !default;
+
+//border colors
+$parrotcolor:#69c800;
+$table-headcolor: #f1f3f6;
+$red: #fe4040 !default;
+$skycolor: #4b29ac !default;
+$skyhovercolor: #371790 !default;
+$border-lightblue:#613fc0;
+//TRANSITION EFFECT
+$trasition_all: all 0.4s ease-in-out 0s !default;
+
+$desktop:1400px;
+$mini-desktop:1280px;
+$h_tab:1024px;
+$tablet:991px;
+$ptablet:767px;
+$mobile:479px;

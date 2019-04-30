@@ -1,0 +1,24 @@
+footer{
+	border-top:1px solid $color-e7;
+	@include padding(30 0);
+	background-color: $white;
+	@include pos(f, auto auto 0 0);
+	width:100%;
+	z-index:1;
+	@media screen and (max-width:$desktop){
+		@include padding(15 0);
+	}
+	@media screen and (max-width:$ptablet){
+		@include padding(10 0);
+		position: static;
+	}
+	p{
+		@include margin(0);
+		@include font-size(15);
+        color: $color-42;
+        font-weight:400;
+        @media screen and (max-width:$ptablet){
+			@include font-size(13);		
+		}
+	}	
+}

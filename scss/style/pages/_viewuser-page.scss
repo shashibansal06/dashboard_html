@@ -1,0 +1,22 @@
+.main_outer {
+	&.afterlogin {			
+		main{		
+			.custom-table{
+				table{									
+					&.i-viewuser-tb{
+						tr{
+							td{
+								&:first-child{
+									text-align: left;
+								}		
+								&:nth-child(4){
+									text-align: center;
+								}	
+							}
+						}
+					}							
+				}
+			}				
+		}		
+	}	
+}

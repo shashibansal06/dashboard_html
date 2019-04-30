@@ -1,0 +1,19 @@
+.main_outer {
+	&.afterlogin {			
+		main{		
+			.custom-table{
+				table{									
+					&.i-view-reportuser-tb{
+						tr{
+							td{
+								&:nth-child(4){
+									text-align: center;
+								}	
+							}
+						}
+					}							
+				}
+			}				
+		}		
+	}	
+}

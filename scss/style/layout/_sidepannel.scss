@@ -1,0 +1,117 @@
+.sidebar{
+	background-color: $skycolor;
+	@include pos(f, 0 auto auto 0);
+	@include box-shadow(4px, 0px, 15px, rgba(0,0,0,0.6));
+	height:100vh;	
+	@include width(325);
+	z-index:9;
+	@media screen and (max-width:$h_tab){
+		@include width(55);
+	}
+	@media screen and (max-width:$ptablet){
+		@include width(255);
+		display: none;
+	}
+	&.wide-sidebar{
+		@include width(255);
+		transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-webkit-transition: all 0.5s ease;
+		nav{
+			ul{
+				li{
+					width: 255px;
+					a{
+						i{
+							display: inline-block;
+
+						}
+					}
+				}
+			}
+		}
+	}
+	.logo-dashborad{
+		text-align: center;
+		@include padding(42 5);
+		a{
+			display: inline-block;
+		}
+		@media screen and (max-width:$desktop){
+			@include padding(25 5);
+		}
+		@media screen and (max-width:$h_tab){
+			display: none;
+		}		
+	}
+	nav{
+		@include margin(20 0);
+		@media screen and (max-width:$desktop){
+			@include margin(15 0);
+		}
+		@media screen and (max-width:$ptablet){
+			@include padding(25 0);
+			@include margin(0);
+		}
+		ul{
+			li{				
+				width:100%;
+				display: inline-block;
+				a{
+					@include padding(10 42);
+					color: $white;
+					display: block;
+					@media screen and (max-width:$desktop){
+						@include padding(8 30);						
+					}
+					@media screen and (max-width:$h_tab){
+						@include padding(8 15);	
+					}
+					span{
+						@include padding-right(35);
+						@include font-size(25);
+						display: inline-block;
+						vertical-align: middle;
+						@media screen and (max-width:$desktop){
+							@include padding-right(25);
+							@include font-size(18);							
+						}
+						@media screen and (max-width:$h_tab){
+							@include font-size(22);
+							@include padding-right(10);	
+						}
+					}
+					i{
+						font-style: normal;
+						@media screen and (max-width:$h_tab){
+							display: none;
+						}
+						@media screen and (max-width:$ptablet){
+							display:inline-block;
+						}
+					}
+					&:hover, &.active{
+						background-color: $skyhovercolor;
+					}
+				}
+				&.nav-border{	
+					a{				
+						@include margin-top(30);
+						@media screen and (max-width:$desktop){	
+							@include margin-top(20);
+						}
+					}
+				}
+				&.nav-margin-bottom{
+					border-bottom:1px solid $border-lightblue;
+					a{
+						@include margin-bottom(40);
+						@media screen and (max-width:$desktop){	
+							@include margin-bottom(20);
+						}
+					}
+				}
+			}
+		}
+	}
+}
